@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(to bottom right, 	#120c0c,  	#262661);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for Disclaimer */
+.disclaimer-container {
+  max-width: 700px;
+  background: rgba(31, 41, 55, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  border: 1px solid #4b5563;
+  backdrop-filter: blur(10px);
+}
+
+/* Marquee Effect */
+.marquee-text {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fbbf24;
+  animation: marquee 8s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Disclaimer Title */
+.disclaimer-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f87171;
+  margin-bottom: 20px;
+  justify-content: top;
+  text-align: right;
+  text-shadow: 0 0 10px rgba(248, 113, 113, 0.5);
+}
+
+/* Risk Disclosure Box */
+.disclaimer-box {
+  background: #111827;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #374151;
+  text-align: center;
+  justify-content: center;
+  position: static;
+  font-size: 14px;
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Accept Button */
+.accept-button {
+  background: linear-gradient(to right, #16a34a, #15803d);
+  color: rgb(11, 26, 136);
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: 0.3s;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accept-button:hover {
+  background: linear-gradient(to right, #15803d, #166534);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.accept-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Stock Prediction Container */
+.prediction-container {
+  max-width: 700px;
+  background: rgba(31, 41, 55, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  border: 1px solid #4b5563;
+  backdrop-filter: blur(10px);
+}
+
+/* Prediction Title */
+.prediction-title {
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Select Dropdown */
+.stock-select {
+  width: 250px;
+  background: #2D3748;
+  border: 1px solid #4A5568;
+  color: white;
+  text-decoration-color: #ef4444;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.stock-select::placeholder {
+  color: #E5E7EB;  /* Light gray */
+}
+
+
+.stock-select:hover {
+  border-color: #3b82f6;
+  -webkit-text-fill-color: #96a0b1;
+  box-shadow: 0 0 10px rgba(197, 200, 204, 0.5);
+}
+
+/* Prediction Result */
+.prediction-result {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 1px solid #374151;
+  text-align: left;
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Prediction Values */
+.prediction-value {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.prediction-value.open {
+  color: #10b981;
+}
+
+.prediction-value.high {
+  color: #ef4444;
+}
+
+.prediction-value.low {
+  color: #3b82f6;
+}
+
+.prediction-value.close {
+  color: #fbbf24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .disclaimer-container,
+  .prediction-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .prediction-title {
+    font-size: 24px;
+  }
+
+  .stock-select {
+    width: 100%;
+  }
+}
