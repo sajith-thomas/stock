@@ -1,2 +1,1 @@
-# stock
-main project
+![Home Page](screenshots/home.png)
